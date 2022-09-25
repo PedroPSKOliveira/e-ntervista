@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Luís">
+		<meta name="viewport" content="width=width-device, initial-scale=1.0">
+		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.bundle.min.css">
+		<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+		<link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
+		<!--<title>E-ntervista</title> -->
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light"
+			th:fragment="navbar">
+			<!-- Container wrapper -->
+			<div class="container-fluid">
+				<!-- wrapper -->
+				<div class="collapse navbar-collapse justify-content-end"
+					id="navbarCenteredExample">
+					<!-- links -->
+					<ul class="navbar-nav mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" th:href="@{/home}">Forma
+								de persona</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Candidatos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Sobre</a>
+						</li>
+						<li>
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+								role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Username
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">Profile</a></li>
+								<li><a class="dropdown-item" href="#">Sair</a></li>
+							</ul>
+						</li>
+						<!-- links -->
+					</ul>
+				</div>
+				<!-- wrapper -->
+			</div>
+			<!-- Container wrapper -->
+		</nav>
+		
+		<script th:fragment="jsSrc" src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+		<script th:fragment="jsSrc" src="/webjars/bootstrap/js/bootstrap.min,js"></script>
+	</body>
+</html>

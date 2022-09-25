@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Luís">
+		<meta name="viewport" content="width=width-device, initial-scale=1.0">
+		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.bundle.min.css">
+		<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+		<link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
+		<title>E-ntervista</title>
+	</head>
+	<body>
+	
+    	<div th:replace="fragments/fragments :: navbar"></div>
+    
+<!-- 		<a th:href="@{/}"> -->
+<!-- 	    	<input type="button" class="btn btn-primary" value="sair"> -->
+<!-- 	    </a> -->
+		<div th:replace="fragments/fragments :: jsSrc"></div>
+	</body>
+</html>
