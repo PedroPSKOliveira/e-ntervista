@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=width-device, initial-scale=1.0">
 		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.bundle.min.css">
+		<link rel="stylesheet" href="/webjars/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 		<link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
 		<!--<title>E-ntervista</title> -->
@@ -16,7 +17,14 @@
 			<!-- Container wrapper -->
 			<div class="container-fluid">
 				<!-- wrapper -->
-				<div class="collapse navbar-collapse justify-content-end"
+				<!-- logo div -->
+				<div class="collapse navbar-collapse justify-content-start">
+					<a th:href="@{home}" class="nav-link">
+						<img alt="logo" src="/img/logo.png" class="logo">
+						<span class="text_logo bold">E-ntervista</span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse justify-content-center"
 					id="navbarCenteredExample">
 					<!-- links -->
 					<ul class="navbar-nav mb-2 mb-lg-0">
@@ -30,18 +38,91 @@
 						<li class="nav-item">
 							<a href="#" class="nav-link">Sobre</a>
 						</li>
-						<li>
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-								role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Username
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Profile</a></li>
-								<li><a class="dropdown-item" href="#">Sair</a></li>
-							</ul>
+						<!-- links -->
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse justify-content-end">
+					<a th:href="@{/}">
+	                	<input type="button" class="btn btn-outline-danger" value="Encerrar sesión">
+	                </a>
+				</div>
+				<!-- wrapper -->
+			</div>
+			<!-- Container wrapper -->
+		</nav>
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light"
+			th:fragment="navbar_candidatos">
+			<!-- Container wrapper -->
+			<div class="container-fluid">
+				<!-- wrapper -->
+				<!-- logo div -->
+				<div class="collapse navbar-collapse justify-content-start">
+					<a th:href="@{home}" class="nav-link">
+						<img alt="logo" src="/img/logo.png" class="logo">
+						<span class="text_logo bold">E-ntervista</span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse justify-content-center"
+					id="navbarCenteredExample">
+					<!-- links -->
+					<ul class="navbar-nav mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" th:href="@{/home}">Forma
+								de persona</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Candidatos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Sobre</a>
 						</li>
 						<!-- links -->
 					</ul>
+				</div>
+				<div class="collapse navbar-collapse justify-content-end">
+					<a th:href="@{/}">
+	                	<input type="button" class="btn btn-outline-danger" value="Encerrar sesión">
+	                </a>
+				</div>
+				<!-- wrapper -->
+			</div>
+			<!-- Container wrapper -->
+		</nav>		
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light"
+			th:fragment="navbar_sobre">
+			<!-- Container wrapper -->
+			<div class="container-fluid">
+				<!-- wrapper -->
+				<!-- logo div -->
+				<div class="collapse navbar-collapse justify-content-start">
+					<a th:href="@{home}" class="nav-link">
+						<img alt="logo" src="/img/logo.png" class="logo">
+						<span class="text_logo bold">E-ntervista</span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse justify-content-center"
+					id="navbarCenteredExample">
+					<!-- links -->
+					<ul class="navbar-nav mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" th:href="@{/home}">Forma
+								de persona</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Candidatos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link active">Sobre</a>
+						</li>
+						<!-- links -->
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse justify-content-end">
+					<a th:href="@{/}">
+	                	<input type="button" class="btn btn-outline-danger" value="Encerrar sesión">
+	                </a>
 				</div>
 				<!-- wrapper -->
 			</div>

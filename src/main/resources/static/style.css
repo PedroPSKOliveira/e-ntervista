@@ -62,3 +62,20 @@
 .pointer{
 	cursor: pointer;
 }
+
+/* navbar */
+
+.logo {
+	width: 50px;
+}
+
+.text_logo{
+	color: #1DAD57;
+	cursor: pointer;
+	transition: 1s ease;
+	
+}
+
+span.text_logo:hover{
+	color: #000;
+}
