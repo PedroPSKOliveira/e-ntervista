@@ -9,8 +9,8 @@ public class LoginControllers {
 	
 	@GetMapping("/")
 	public ModelAndView index() {
-		ModelAndView home = new ModelAndView();
-		home.setViewName("login/login");
-		return home;
+		ModelAndView login = new ModelAndView();
+		login.setViewName("login/login");
+		return login;
 	}
 }
