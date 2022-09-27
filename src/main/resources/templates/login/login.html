@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="utf-8">
-		<meta name="author" content="Luís">
-		<meta name="viewport" content="width=width-device, initial-scale=1.0">
-		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/webjars/font-awesome/css/font-awesome.css">
-		<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
-		<link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
-		<title>E-ntervista | Login</title>
-	</head>
-	<body>
-		<main class="signin w-25">
-	        <div class="signin-header">
-	            <p class="bold">E-ntervista</p>
-	        </div>
-	        <div class="signin-body">
-	            <form action="/logIn" method="post">
-	                <div class="form-item">
-	                    <label for="floatingInput" class="">Nombre de usuario:</label>
-	                    <input type="text" name="" id="floatingInput" class="form-control">
-	                </div>
-	                <div class="form-item">
-	                    <label for="floatingPassword">Contraseña:</label>
-	                    <input type="password" name="" id="floatingPassword" class="form-control">
-	                </div>
-	                <div class="form-item d-flex justify-content-end">
-	                    <a href="#" class="nav-link text-primary forgot">¿Olvido la contraseña?</a>
-	                </div>
-	                <div class="form-item d-flex justify-content-center">
-	                	<a th:href="@{home}">
-	                    	<input type="button" class="btn btn-primary" value="Iniciar sesión">
-	                    </a>
-	                </div>
-	            </form>
-	        </div>
-      </main>
-		
-		<div th:replace="fragments/fragments :: jsSrc"></div>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Luís">
+    <meta name="viewport" content="width=width-device, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webjars/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
+    <title>E-ntervista | Login</title>
+</head>
+<body>
+<main class="signin w-25">
+    <div class="signin-header">
+        <p class="bold">E-ntervista</p>
+    </div>
+    <div class="signin-body">
+        <form action="/logIn" method="post">
+            <div class="form-item">
+                <label for="floatingInput" class="">Nombre de usuario:</label>
+                <input type="text" name="" id="floatingInput" class="form-control">
+            </div>
+            <div class="form-item">
+                <label for="floatingPassword">Contraseña:</label>
+                <input type="password" name="" id="floatingPassword" class="form-control">
+            </div>
+            <div class="form-item d-flex justify-content-end">
+                <a href="#" class="nav-link text-primary forgot">¿Olvido la contraseña?</a>
+            </div>
+            <div class="form-item d-flex justify-content-center">
+                <a th:href="@{home}">
+                    <input type="button" class="btn btn-primary" value="Iniciar sesión">
+                </a>
+            </div>
+        </form>
+    </div>
+</main>
+
+<div th:replace="fragments/fragments :: jsSrc"></div>
+</body>
 </html>
