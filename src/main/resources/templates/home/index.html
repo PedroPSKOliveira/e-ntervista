@@ -14,10 +14,85 @@
 	<body>
 	
     	<div th:replace="fragments/fragments :: navbar"></div>
-    
-<!-- 		<a th:href="@{/}"> -->
-<!-- 	    	<input type="button" class="btn btn-primary" value="sair"> -->
-<!-- 	    </a> -->
+    	
+    	<div class="container-fluid p-5">
+    		
+    		<div class="row title mt-3">
+    			<h4>Forma de persona</h4>
+    		</div>
+    		
+    		<div class="col-xl-9">
+    			<form action="" method="post">
+				    <div class="row">
+				      <div class="col-xl-6">
+				        <div class="form-group">
+				          <label for="first">Primer Nombre</label>
+				          <input type="text" class="form-control" placeholder="" id="first">
+				        </div>
+				      </div>
+				      <!--  col-xl-6   -->
+				
+				      <div class="col-xl-6">
+				        <div class="form-group">
+				          <label for="last">Apellido</label>
+				          <input type="text" class="form-control" placeholder="" id="last">
+				        </div>
+				      </div>
+				      <!--  col-xl-6   -->
+				    </div>
+				
+				
+				    <div class="row">
+				      <div class="col-xl-6">
+				        <div class="form-group">
+				          <label for="company">Ocupación</label>
+				          <input type="text" class="form-control" placeholder="" id="company">
+				        </div>
+				
+				
+				      </div>
+				      <!--  col-xl-6   -->
+				
+				      <div class="col-xl-6">
+				
+				        <div class="form-group">
+				          <label for="phone">Número de teléfono</label>
+				          <div class="d-flex">
+				          	<select class="form-select w-25 me-2" id="codePhone">
+				          		<option selected>DDI</option>
+				          	</select>
+				          	<input type="tel" class="form-control" id="phone" placeholder="Número">
+				          </div>
+				        </div>
+				      </div>
+				      <!--  col-xl-6   -->
+				    </div>
+				    <!--  row   -->
+				    <div class="row">
+				    	<div class="col-xl-6">
+				    		<div class="form-group">
+				    			<label for="birthday">Cumpleaños</label>
+				    			<input type="date" class="form-control" id="birthday">
+				    		</div>	
+				    	</div>
+				    	
+				    	<div class="col-xl-6">
+				    		<div class="form-group">
+				    			<label for="email">Email</label>
+				    			<input type="email" id="email" class="form-control" placeholder="example@example.com">
+				    		</div>
+				    	</div>
+				    	
+				    </div>	
+				    <div class="row justify-content-start ps-2">
+				    	<button type="submit" class="btn btn-primary mt-3 me-2 col-2">Guardar</button>
+				    	<button type="submit" class="btn btn-danger mt-3 me-2 col-2">Cancelar</button>
+				    </div>
+				  </form>
+    		</div>
+    	</div>
+    	
+    	
 		<div th:replace="fragments/fragments :: jsSrc"></div>
 	</body>
 </html>
