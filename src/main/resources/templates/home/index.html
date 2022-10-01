@@ -22,12 +22,12 @@
     </div>
 
     <div class="col-xl-9">
-        <form action="" method="post">
+        <form action="/insertCandidate" method="post" th:object="@{candidate}">
             <div class="row">
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="first">Primer Nombre</label>
-                        <input type="text" class="form-control" placeholder="" id="first">
+                        <input type="text" class="form-control" name="firstName" placeholder="" id="first">
                     </div>
                 </div>
                 <!--  col-xl-6   -->
@@ -35,7 +35,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="last">Apellido</label>
-                        <input type="text" class="form-control" placeholder="" id="last">
+                        <input type="text" class="form-control" name="lastName" placeholder="" id="last">
                     </div>
                 </div>
                 <!--  col-xl-6   -->
@@ -46,7 +46,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="company">Ocupación</label>
-                        <input type="text" class="form-control" placeholder="" id="company">
+                        <input type="text" class="form-control" name="occupation" placeholder="" id="company">
                     </div>
 
 
@@ -58,10 +58,10 @@
                     <div class="form-group">
                         <label for="phone">Número de teléfono</label>
                         <div class="d-flex">
-                            <select class="form-select w-25 me-2" id="codePhone">
+                            <select class="form-select w-25 me-2" name="areaCode" id="codePhone">
                                 <option selected>DDI</option>
                             </select>
-                            <input type="tel" class="form-control" id="phone" placeholder="Número">
+                            <input type="tel" class="form-control" id="phone" name="phoneNumber" placeholder="Número">
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="birthday">Cumpleaños</label>
-                        <input type="date" class="form-control" id="birthday">
+                        <input type="date" class="form-control" name="birthday" id="birthday">
                     </div>
                 </div>
 

@@ -26,6 +26,9 @@ public class Candidate {
     @Column(name = "Phone Number")
     private String phoneNumber;
 
+    @Column(name = "birthday")
+    private String birthday;
+
     @Column(name = "Email")
     private String email;
 
@@ -33,11 +36,12 @@ public class Candidate {
     private String applicationArea;
 
     public Candidate(String firstName, String lastName, String occupation,
-                     String phoneNumber, String email, String applicationArea) {
+                     String phoneNumber, String birthday, String email, String applicationArea) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.occupation = occupation;
         this.phoneNumber = phoneNumber;
+        this.birthday = birthday;
         this.email = email;
         this.applicationArea = applicationArea;
     }
@@ -72,6 +76,14 @@ public class Candidate {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getBirthday(){
+        return birthday;
+    }
+
+    public void setBirthday(String birthday){
+        this.birthday = birthday;
     }
 
     public String getEmail() {
