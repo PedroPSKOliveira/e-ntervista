@@ -13,6 +13,7 @@ public class HomeControllers {
 	public ModelAndView index() {
 		ModelAndView home = new ModelAndView(Candidate candidate);
 		home.setViewName("home/index");
+		home.addObject("cadidate", new Candidate);
 		return home;
 	}
 }
