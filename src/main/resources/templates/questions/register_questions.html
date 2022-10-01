@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=width-device, initial-scale=1.0">
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.bundle.min.css">
-    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
     <title>E-ntervista | Home</title>
@@ -16,19 +16,18 @@
     <div th:replace="fragments/fragments :: navbar"></div>
 
 
-    <div th:replace="fragments/fragments :: jsSrc"></div>
-
+    
     <div class="container-fluid p-5">
         <div class="row title mt-3">
             <h4>Forma de pregunta</h4>
         </div>
-    
+        
         <div class="col-xl-9">
             <form action="" method="post">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Pergunta</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Sua pergunta...">
-                  </div>
+                </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Resposta</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -40,5 +39,7 @@
             </form>
         </div>
     </div>
+    
+    <div th:replace="fragments/fragments :: jsSrc"></div>
 </body>
 </html>

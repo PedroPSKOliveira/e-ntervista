@@ -17,12 +17,12 @@
 
 <div class="container-fluid p-5">
 
-    <div class="row title mt-3">
+    <div class="row title mt-3 ms-5 mb-4">
         <h4>Forma de persona</h4>
     </div>
 
-    <div class="col-xl-9">
-        <form action="/insertCandidate" method="post" th:object="@{candidate}">
+    <div class="col-xl-9 offset-md-1">
+        <form action="" method="post">
             <div class="row">
                 <div class="col-xl-6">
                     <div class="form-group">
@@ -86,7 +86,7 @@
             </div>
             <div class="row justify-content-start ps-2">
                 <button type="submit" class="btn btn-primary mt-3 me-2 col-2">Guardar</button>
-                <button type="submit" class="btn btn-danger mt-3 me-2 col-2">Cancelar</button>
+                <button type="reset" class="btn btn-danger mt-3 me-2 col-2">Cancelar</button>
             </div>
         </form>
     </div>
