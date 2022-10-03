@@ -9,17 +9,17 @@
 		<link rel="stylesheet" href="/webjars/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 		<link rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-			crossorigin="anonymous"/>
+        href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+        crossorigin="anonymous"/>
 		<link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
 		<!--<title>E-ntervista</title> -->
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light nav"
-			th:fragment="navbar">
-			<!-- Container wrapper -->
-			<div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav"
+        th:fragment="navbar">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
 				<!-- wrapper -->
 				<!-- logo div -->
 				<div class="collapse navbar-collapse justify-content-start">
@@ -56,18 +56,18 @@
 				</div>
 				<div class="collapse navbar-collapse justify-content-end">
 					<a th:href="@{/}">
-						<input type="button" class="btn btn-outline-danger" value="Encerrar sesión">
+                        <input type="button" class="btn btn-outline-danger" value="Encerrar sesión">
 					</a>
 				</div>
 				<!-- wrapper -->
 			</div>
 			<!-- Container wrapper -->
 		</nav>
-
+        
 		<script th:fragment="jsSrc" src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 		<script th:fragment="jsSrc" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 		<script th:fragment="jsSrc" src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script th:fragment="jsAwesome" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/fontawesome.min.js" integrity="sha512-j3gF1rYV2kvAKJ0Jo5CdgLgSYS7QYmBVVUjduXdoeBkc4NFV4aSRTi+Rodkiy9ht7ZYEwF+s09S43Z1Y+ujUkA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script th:fragment="jsAwesome" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	</body>
+		<script th:fragment="jsSrc" src="/webjars/popper.js/2.9.3/umd/popper.min.js"></script>
+        <script th:fragment="fontawesome" src="/webjars/font-awesome/js/all.js"></script>
+    </body>
 </html>
