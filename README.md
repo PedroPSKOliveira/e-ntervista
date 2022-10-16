@@ -26,7 +26,7 @@ Objetivos pendentes
 >   
 > - Criar lógica de login junto ao Spring Security.
 >   
-> - ***Quando concluidos os objetivos acima, integrar todo o front-end ao back-end usando JQuery/Ajax para melhor funcionamento da aplicação com requisões em grandes volumes
+> - ***Quando concluidos os objetivos acima, integrar todo o front-end ao back-end usando JQuery/Ajax para melhor funcionamento da aplicação com requisões em grandes volumes***
 >   
 
 ---
@@ -82,7 +82,7 @@ pending objectives
 >
 > - Build login logic alongside or Spring Security.
 >
-> - ***When the above objectives are completed, integrate all the front-end to the back-end using JQuery/Ajax for better application performance with large volume requirements
+> - ***When the above objectives are completed, integrate all the front-end to the back-end using JQuery/Ajax for better application performance with large volume requirements***
 >
 
 ---
