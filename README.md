@@ -22,7 +22,7 @@ Objetivos pendentes
 >   
 > - Dar inicio as interfaces DAO. (inicialmente, só criar os arquivos já serve.)
 >   
-> - Criar soluções para mandar objetos para o Front-End (JS vai ser interessante, pesquisar sobre JQuery e Spring Boot).
+> - Criar soluções para mandar objetos para o Front-End.
 >   
 > - Criar lógica de login junto ao Spring Security.
 >   
@@ -78,7 +78,7 @@ pending objectives
 >
 > - Start the DAO interfaces. (Initially, just create já serve files.)
 >
-> - Create solutions to send objects to the Front-End (JS will be interesting, research on JQuery and Spring Boot).
+> - Create solutions to send objects to the Front-End.
 >
 > - Build login logic alongside or Spring Security.
 >
@@ -103,4 +103,8 @@ pending objectives
 > - Use pure JS to create dark mode and light mode;
 >
 > - smoothing animations
+<<<<<<< HEAD
 >
+=======
+>
+>>>>>>> ff26121f70576054ee2575b53e2758a3cd62b727
