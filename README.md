@@ -103,8 +103,7 @@ pending objectives
 > - Use pure JS to create dark mode and light mode;
 >
 > - smoothing animations
-<<<<<<< HEAD
 >
-=======
->
->>>>>>> ff26121f70576054ee2575b53e2758a3cd62b727
+
+
+Working...
