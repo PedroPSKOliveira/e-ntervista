@@ -16,7 +16,7 @@
         <p class="bold">E-ntervista</p>
     </div>
     <div class="signin-body">
-        <form action="logar" method="post">
+        <form action="login" method="post">
             <div class="form-item">
                 <label for="floatingInput" class="">Nombre de usuario:</label>
                 <input type="text" name="username" id="floatingInput" class="form-control">
@@ -29,9 +29,9 @@
                 <a href="#" class="nav-link text-primary forgot">¿Olvido la contraseña?</a>
             </div>
             <div class="form-item d-flex justify-content-center">
-                <a th:href="@{/home}">
-                    <input type="button" class="btn btn-primary" value="Iniciar sesión">
-                </a>
+                <input type="submit" class="btn btn-primary" value="Iniciar sesión">
+                <!-- <a th:href="@{/home}">
+                </a> -->
             </div>
         </form>
     </div>

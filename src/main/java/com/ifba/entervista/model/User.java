@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "user")
 public class User {
@@ -14,6 +17,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idUser")
     private Long id;
 
     @Column(name = "nombreDeUsuario")
@@ -22,35 +26,19 @@ public class User {
     @Column(name = "contrasena")
     private String password;
 
-    public User(Long id, String username, String password) {
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "idEntrevistador")
+    private Long idEntrevistador;
+
+    public User(Long id, String username, String email, String password) {
         this.id = id;
         this.username = username;
+        this.email = email;
         this.password = password;
     }
 
-    // Getters and Setters (Omitted for brevity)
-    
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return username;
-    }
-
-    public void setUserName(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public User() {
     }
 }
