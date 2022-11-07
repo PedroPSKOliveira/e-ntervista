@@ -9,8 +9,17 @@ import com.ifba.entervista.model.Candidato;
 @Repository
 public interface CandidatoDAO  extends JpaRepository<Candidato, Long> {
 
+    // find by id
+    Object findById(long id);
+
+    // find by email
     Object findByEmail(String email);
 
+    // findAll
     List<Candidato> findAll();
+
+    void deleteCandidate(Long id);
+
+
     
 }

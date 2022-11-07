@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ifba.entervista.dao.CandidatoDAO;
 // import com.ifba.entervista.model.Candidato;
+import com.ifba.entervista.model.Candidato;
 
 
 
@@ -30,6 +32,17 @@ public class CandidatesControllers{
         // list all candidates
         List candidatos = candidatoDAO.findAll();
         model.addAttribute("candidato", candidatos);
+        return candidates;
+    }
+
+
+    @PostMapping("/deletecandidates")
+    public ModelAndView deleteCandidates(Candidato candidato) {
+        ModelAndView candidates = new ModelAndView();
+        // delete candidate
+        candidatoDAO.deleteCandidate(candidato.getId());
+        // redirect to candidates
+        candidates.setViewName("redirect:/candidates");
         return candidates;
     }
 }
