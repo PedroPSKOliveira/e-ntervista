@@ -26,9 +26,17 @@ public class HomeControllers {
 
 	@PostMapping("/saveCandidato")
 	public ModelAndView saveCand(Candidato candidato) {
-		candidatoRepo.save(candidato);
+		ModelAndView home = new ModelAndView("redirect:/home");
+		//verify if the email is already in the database
+		if(candidatoRepo.findByEmail(candidato.getEmail()) == null) {
+			candidatoRepo.save(candidato);
+			return home;
+		}else {
 		// redirect to home
-		return new ModelAndView("redirect:/home");
+			return home;
+		}
+		// redirect to home
+		// return new ModelAndView("redirect:/home");
 	}
 
 }

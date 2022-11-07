@@ -28,15 +28,18 @@
 	            </tr>
             </thead>
             <tbody>
-	            <tr th:each="cadidato : ${candidato}">
-					<td th:text="${candidato.id}"></td>
-					<td th:text="${candidato.nombre}"></td>
-					<td th:text="${candidato.apellido}"></td>
-					<td th:text="${candidato.ocupacion}"></td>
-					<td th:text="${candidato.numeroTelefono}"></td>
-					<td th:text="${candidato.cumpleanos}"></td>
-					<td th:text="${candidato.email}"></td>
-					<td>"Edit"</td>
+	            <tr th:each="candidato : (${candidato})">
+					<td th:text="(${candidato.id})"></td>
+					<td th:text="(${candidato.nombre})"></td>
+					<td th:text="(${candidato.apellido})"></td>
+					<td th:text="(${candidato.ocupacion})"></td>
+					<td th:text="(${candidato.numeroDeTelefono})"></td>
+					<td th:text="(${candidato.cumpleanos})"></td>
+					<td th:text="(${candidato.email})"></td>
+					<td>
+						<button class="btn btn-info" onclick="">Edit</button>
+						<button class="btn btn-danger">Delete</button>
+					</td>
 	            </tr>
             </tbody>
         </table>
