@@ -20,27 +20,32 @@ public class Candidato {
     private Long id;
 
     @Column(name = "nombre")
-    private String nome;
+    private String nombre;
 
-    @Column(name = "CPF")
-    private String CPF;
+    @Column(name = "apellido")
+    private String apellido;
 
-    @Column(name = "RG")
-    private String RG;
+    @Column(name = "ocupacion")
+    private String ocupacion;
 
-    @Column(name = "idArea")
-    private Long idArea;
+    @Column(name = "numeroDeTelefono")
+    private String numeroDeTelefono;
 
-    @Column(name = "dataNascimento")
-    private String dataNascimento;
+    @Column(name = "cumpleanos")
+    private String cumpleanos;
 
-    public Candidato(Long id, String nome, String CPF, String RG, Long idArea, String dataNascimento) {
+    @Column(name = "email")
+    private String email;
+
+    public Candidato(Long id, String nombre, String apellido, String ocupacion, String numeroDeTelefono,
+            String cumpleanos, String email) {
         this.id = id;
-        this.nome = nome;
-        this.CPF = CPF;
-        this.RG = RG;
-        this.idArea = idArea;
-        this.dataNascimento = dataNascimento;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.ocupacion = ocupacion;
+        this.numeroDeTelefono = numeroDeTelefono;
+        this.cumpleanos = cumpleanos;
+        this.email = email;
     }
 
     public Candidato() {

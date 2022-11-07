@@ -29,8 +29,8 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "idEntrevistador")
-    private Long idEntrevistador;
+    // @Column(name = "idEntrevistador")
+    // private Long idEntrevistador;
 
     public User(Long id, String username, String email, String password) {
         this.id = id;

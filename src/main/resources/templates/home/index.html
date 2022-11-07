@@ -22,12 +22,12 @@
     </div>
 
     <div class="col-xl-9 offset-md-1">
-        <form action="" method="post">
+        <form th:action="@{/saveCandidato}" method="post"  th:object="(${candidato})">
             <div class="row">
                 <div class="col-xl-6">
                     <div class="form-group">
-                        <label for="first">Primer Nombre</label>
-                        <input type="text" class="form-control" name="firstName" placeholder="" id="first">
+                        <label for="first">Nombre</label>
+                        <input type="text" th:field="*{nombre}" class="form-control" name="firstName" placeholder="" id="first">
                     </div>
                 </div>
                 <!--  col-xl-6   -->
@@ -35,7 +35,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="last">Apellido</label>
-                        <input type="text" class="form-control" name="lastName" placeholder="" id="last">
+                        <input type="text" th:field="*{apellido}" class="form-control" name="lastName" placeholder="" id="last">
                     </div>
                 </div>
                 <!--  col-xl-6   -->
@@ -46,7 +46,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="company">Ocupación</label>
-                        <input type="text" class="form-control" name="occupation" placeholder="" id="company">
+                        <input type="text" th:field="*{ocupacion}" class="form-control" name="occupation" placeholder="" id="company">
                     </div>
 
 
@@ -54,40 +54,58 @@
                 <!--  col-xl-6   -->
 
                 <div class="col-xl-6">
-
                     <div class="form-group">
                         <label for="phone">Número de teléfono</label>
                         <div class="d-flex">
-                            <select class="form-select w-25 me-2" name="areaCode" id="codePhone">
-                                <option selected>DDI</option>
-                            </select>
-                            <input type="tel" class="form-control" id="phone" name="phoneNumber" placeholder="Número">
+                            <input type="tel" th:field="*{numeroDeTelefono}" class="form-control" id="phone" name="phoneNumber" placeholder="Número">
                         </div>
                     </div>
                 </div>
                 <!--  col-xl-6   -->
+
+                
             </div>
             <!--  row   -->
             <div class="row">
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="birthday">Cumpleaños</label>
-                        <input type="date" class="form-control" name="birthday" id="birthday">
+                        <input type="date" th:field="*{cumpleanos}" class="form-control" name="birthday" id="birthday">
                     </div>
                 </div>
 
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="example@example.com">
+                        <input type="email" th:field="*{email}" id="email" class="form-control" placeholder="example@example.com">
                     </div>
                 </div>
 
             </div>
-            <div class="row justify-content-start ps-2">
+            <!--  row   -->
+            <div class="row">
+                <!-- col-xl-6 -->
+                <div class="col-xl-6">
+                    <div class="form-group">
+                        <label for="area">Area</label>
+                            <select class="form-select" id="area" name="area">
+                                <option selected>Área</option>
+                                <option value="1">Área 1</option>
+                                <option value="2">Área 2</option>
+                                <option value="3">Área 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- buttons -->
                 <button type="submit" class="btn btn-primary mt-3 me-2 col-2">Guardar</button>
                 <button type="reset" class="btn btn-danger mt-3 me-2 col-2">Cancelar</button>
-            </div>
+                <a th:href="@{candidates}">
+                    <input type="button" value="Listar" class="btn btn-success mt-3 me-2 col-2">
+                </a>
+             </div>
+            
         </form>
     </div>
 </div>
