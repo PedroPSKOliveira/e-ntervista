@@ -18,7 +18,7 @@ public interface CandidatoDAO  extends JpaRepository<Candidato, Long> {
     // findAll
     List<Candidato> findAll();
 
-    void deleteCandidate(Long id);
+    void deleteById(Long id);
 
 
     

@@ -40,7 +40,7 @@ public class CandidatesControllers{
     public ModelAndView deleteCandidates(Candidato candidato) {
         ModelAndView candidates = new ModelAndView();
         // delete candidate
-        candidatoDAO.deleteCandidate(candidato.getId());
+        candidatoDAO.deleteById(candidato.getId());
         // redirect to candidates
         candidates.setViewName("redirect:/candidates");
         return candidates;
