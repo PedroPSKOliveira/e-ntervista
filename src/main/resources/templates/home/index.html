@@ -27,7 +27,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="first">Nombre</label>
-                        <input type="text" th:field="*{nombre}" class="form-control" name="firstName" placeholder="" id="first">
+                        <input type="text" th:field="*{nombre}" class="form-control" name="firstName" placeholder="" id="first" required>
                     </div>
                 </div>
                 <!--  col-xl-6   -->
@@ -35,7 +35,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="last">Apellido</label>
-                        <input type="text" th:field="*{apellido}" class="form-control" name="lastName" placeholder="" id="last">
+                        <input type="text" th:field="*{apellido}" class="form-control" name="lastName" placeholder="" id="last" required>
                     </div>
                 </div>
                 <!--  col-xl-6   -->
@@ -46,7 +46,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="company">Ocupación</label>
-                        <input type="text" th:field="*{ocupacion}" class="form-control" name="occupation" placeholder="" id="company">
+                        <input type="text" th:field="*{ocupacion}" class="form-control" name="occupation" placeholder="" id="company" required>
                     </div>
 
 
@@ -57,7 +57,7 @@
                     <div class="form-group">
                         <label for="phone">Número de teléfono</label>
                         <div class="d-flex">
-                            <input type="tel" th:field="*{numeroDeTelefono}" class="form-control" id="phone" name="phoneNumber" placeholder="Número">
+                            <input required type="tel" th:field="*{numeroDeTelefono}" class="form-control" id="phone" name="phoneNumber" placeholder="Número">
                         </div>
                     </div>
                 </div>
@@ -70,14 +70,14 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="birthday">Cumpleaños</label>
-                        <input type="date" th:field="*{cumpleanos}" class="form-control" name="birthday" id="birthday">
+                        <input required type="date" th:field="*{cumpleanos}" class="form-control" name="birthday" id="birthday">
                     </div>
                 </div>
 
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" th:field="*{email}" id="email" class="form-control" placeholder="example@example.com">
+                        <input required type="email" th:field="*{email}" id="email" class="form-control" placeholder="example@example.com">
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                 <div class="col-xl-6">
                     <div class="form-group">
                         <label for="area">Area</label>
-                            <select class="form-select" id="area" name="area">
+                            <select class="form-select" id="area" name="area" required>
                                 <option selected>Área</option>
                                 <option value="1">Área 1</option>
                                 <option value="2">Área 2</option>
