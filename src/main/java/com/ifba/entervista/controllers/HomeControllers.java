@@ -28,13 +28,13 @@ public class HomeControllers {
 	public ModelAndView saveCand(Candidato candidato) {
 		ModelAndView home = new ModelAndView("redirect:/home");
 		//verify if the email is already in the database
-		if(candidatoRepo.findByEmail(candidato.getEmail()) == null) {
+		if(!candidatoRepo.existsByEmail(candidato.getEmail())) {
 			candidatoRepo.save(candidato);
 			return home;
-		}else {
+		}
 		// redirect to home
 			return home;
-		}
+
 		// redirect to home
 		// return new ModelAndView("redirect:/home");
 	}

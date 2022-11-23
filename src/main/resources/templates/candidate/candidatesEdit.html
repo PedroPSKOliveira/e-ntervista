@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Luís">
+  <meta name="viewport" content="width=width-device, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.bundle.min.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
+  <title>E-ntervista | Home</title>
+</head>
+<body>
+
+<div th:replace="fragments/fragments :: navbar"></div>
+
+<div class="container-fluid p-5">
+
+  <div class="row title mt-3 ms-5 mb-4">
+    <h4>Forma de persona</h4>
+  </div>
+
+  <div class="col-xl-9 offset-md-1">
+    <form th:action="@{/candidateEdit}" method="get"  th:object="(${candidato})">
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="first">Nombre</label>
+            <input type="text" th:field="*{nombre}" class="form-control" name="firstName" placeholder="" id="first" required>
+          </div>
+        </div>
+        <!--  col-xl-6   -->
+
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="last">Apellido</label>
+            <input type="text" th:field="*{apellido}" class="form-control" name="lastName" placeholder="" id="last" required>
+          </div>
+        </div>
+        <!--  col-xl-6   -->
+      </div>
+
+
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="company">Ocupación</label>
+            <input type="text" th:field="*{ocupacion}" class="form-control" name="occupation" placeholder="" id="company" required>
+          </div>
+
+
+        </div>
+        <!--  col-xl-6   -->
+
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="phone">Número de teléfono</label>
+            <div class="d-flex">
+              <input required type="tel" th:field="*{numeroDeTelefono}" class="form-control" id="phone" name="phoneNumber" placeholder="Número">
+            </div>
+          </div>
+        </div>
+        <!--  col-xl-6   -->
+
+
+      </div>
+      <!--  row   -->
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="birthday">Cumpleaños</label>
+            <input required type="date" th:field="*{cumpleanos}" class="form-control" name="birthday" id="birthday">
+          </div>
+        </div>
+
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input required type="email" th:field="*{email}" id="email" class="form-control" placeholder="example@example.com">
+          </div>
+        </div>
+
+      </div>
+      <!--  row   -->
+      <div class="row">
+        <!-- col-xl-6 -->
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="area">Area</label>
+            <select class="form-select" id="area" name="area" required>
+              <option selected>Área</option>
+              <option value="1">Área 1</option>
+              <option value="2">Área 2</option>
+              <option value="3">Área 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- buttons -->
+      <input th:value="(${candidato.id})" type="hidden" name="id">
+      <button type="submit" class="btn btn-primary mt-3 me-2 col-2">Guardar</button>
+      <button type="reset" class="btn btn-danger mt-3 me-2 col-2">Cancelar</button>
+      <a th:href="@{candidates}">
+        <input type="button" value="Listar" class="btn btn-success mt-3 me-2 col-2">
+      </a>
+  </div>
+
+  <td th:text="(${candidato.id})"></td>
+  <td th:text="(${candidato.nombre})"></td>
+  <td th:text="(${candidato.apellido})"></td>
+  <td th:text="(${candidato.ocupacion})"></td>
+  <td th:text="(${candidato.numeroDeTelefono})"></td>
+  <td th:text="(${candidato.cumpleanos})"></td>
+  <td th:text="(${candidato.email})"></td>
+
+  </form>
+</div>
+</div>
+
+
+<div th:replace="fragments/fragments :: jsSrc"></div>
+</body>
+</html>
