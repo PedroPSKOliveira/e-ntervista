@@ -15,6 +15,10 @@ public interface CandidatoDAO  extends JpaRepository<Candidato, Long> {
     // find by email
     Object findByEmail(String email);
 
+    boolean existsByEmail(String email);
+
+    Candidato findCandidatoById(long id);
+
     // findAll
     List<Candidato> findAll();
 

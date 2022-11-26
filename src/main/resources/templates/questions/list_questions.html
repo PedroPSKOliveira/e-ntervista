@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Luís">
+  <meta name="viewport" content="width=width-device, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.bundle.min.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+  <link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
+  <title>E-ntervista | Perguntas</title>
+</head>
+<body>
+<div th:replace="fragments/candidates_fragments :: navbar_candidatos"></div>
+<div class="container">
+  <div class="d-flex justify-content-center mt-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Pergunta</th>
+          <th scope="col">Resposta</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr th:each="perguntas : ${perguntas}">
+        <td th:text="(${perguntas.id})"></td>
+        <td th:text="(${perguntas.Perguntas})"></td>
+        <td>
+          <form th:action="@{/findToEdit}" method="get">
+            <input th:value="(${perguntas.id})" type="hidden" name="id">
+            <button type="submit" class="btn btn-success">Edit</button>
+          </form>
+          <form th:action="@{/deleteQuestion}" method="get">
+            <input th:value="(${perguntas.id})" type="hidden" name="id">
+            <button type="submit" class="btn btn-outline-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div th:replace="fragments/fragments :: jsSrc"></div>
+</body>
+</html>

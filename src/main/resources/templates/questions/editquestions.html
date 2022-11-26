@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Luís">
+  <meta name="viewport" content="width=width-device, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.bundle.min.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <link rel="shortcut icon" th:href="@{/favicon.ico}" type="favicon">
+  <title>E-ntervista | Perguntas</title>
+</head>
+
+<body>
+<div th:replace="fragments/fragments :: navbar"></div>
+
+
+
+<div class="container-fluid p-5">
+  <div class="row title mt-3">
+    <h4>Forma de pergunta</h4>
+  </div>
+
+  <div class="col-xl-9">
+    <div class="col-xl-9 offset-md-1">
+      <form th:action="@{/editquestions}" method="post"  th:object="(${pergunta})">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="form-group">
+              <label for="Perguntas" class="from-label">Pergunta</label>
+              <input type="text" th:field="*{Perguntas}" class="form-control" name="Perguntas" placeholder="Sua pergunta" id="Perguntas" required>
+            </div>
+          </div>
+        </div>
+        <tr th:each="perguntas : ${pergunta}">
+          <input th:value="(${perguntas.id})" type="hidden" name="id">
+          <button type="submit" class="btn btn-primary mt-3 me-2 col-2">Guardar</button>
+          <button type="reset" class="btn btn-danger mt-3 me-2 col-2">Cancelar</button>
+          <a th:href="@{/findQuestions}">
+            <input type="button" value="Listar" class="btn btn-success mt-3 me-2 col-2">
+          </a>
+        </tr>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div th:replace="fragments/fragments :: jsSrc"></div>
+</body>
+</html>
