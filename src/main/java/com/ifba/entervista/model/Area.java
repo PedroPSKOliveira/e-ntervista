@@ -8,22 +8,21 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "area")
-@RequiredArgsConstructor
 public class Area {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idArea")
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idArea", nullable = false)
+    private long id;
 
     @Column(name = "nombre")
-    private String nombre;
+    private String nome;
 
-    public Area(Long id, String nombre){
+    public Area(Long id, String nome){
         this.id = id;
-        this.nombre = nombre;
+        this.nome = nome;
     }
 
-    public String getNombre() {
-        return nombre;
+    public Area(){
+
     }
 }

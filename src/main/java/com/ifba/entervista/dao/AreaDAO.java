@@ -9,8 +9,8 @@ import java.util.List;
 @Repository
 public interface AreaDAO extends JpaRepository<Area, Long> {
 
-    Object findById(long id);
-    Object findByNombre(String nombre);
+    Area findAreaById(long id);
+    Object findByNome(String nome);
     List<Area> findAll();
 
     void deleteById(Long id);
