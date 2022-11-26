@@ -52,9 +52,7 @@ public class CandidatesControllers{
     @GetMapping("/candidateEdit")
     public ModelAndView candidateEdit(Model model, Candidato candidato) {
         ModelAndView candidates = new ModelAndView();
-        // delete candidate
         candidatoDAO.save(candidato);
-        // redirect to candidates
         candidates.setViewName("redirect:/candidates");
         List candidatos = candidatoDAO.findAll();
         model.addAttribute("candidato", candidatos);

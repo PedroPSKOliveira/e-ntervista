@@ -53,10 +53,10 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- Table `entervista`.`perguntas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `entervista`.`perguntas` (
-  `idPeguntas` INT NOT NULL,
+  `idPerguntas` BIGINT NOT NULL AUTO_INCREMENT,
   `Perguntas` VARCHAR(200) NULL DEFAULT NULL,
-  PRIMARY KEY (`idPeguntas`),
-  UNIQUE INDEX `idPeguntas_UNIQUE` (`idPeguntas` ASC) ,
+  PRIMARY KEY (`idPerguntas`),
+  UNIQUE INDEX `idPeguntas_UNIQUE` (`idPerguntas` ASC) ,
   UNIQUE INDEX `Perguntas_UNIQUE` (`Perguntas` ASC) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `entervista`.`questionariopergunta` (
   INDEX `fk_perguntas_has_Questionario_perguntas1_idx` (`idPeguntas` ASC) ,
   CONSTRAINT `fk_perguntas_has_Questionario_perguntas1`
     FOREIGN KEY (`idPeguntas`)
-    REFERENCES `entervista`.`perguntas` (`idPeguntas`),
+    REFERENCES `entervista`.`perguntas` (`idPerguntas`),
   CONSTRAINT `fk_perguntas_has_Questionario_Questionario1`
     FOREIGN KEY (`idQuestionario`)
     REFERENCES `entervista`.`questionario` (`idQuestionario`))
